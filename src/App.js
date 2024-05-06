@@ -14,8 +14,6 @@ const initialToDoList = [
   { id: 1, status: false, title: 'Mi Primera Tarea' },
   { id: 2, status: false, title: 'Mi Segunda Tarea' },
   { id: 3, status: false, title: 'Mi Tercera Tarea' },
-  { id: 4, status: true, title: 'Tarea finalizada' },
-  { id: 5, status: false, title: 'Tarea por finalizar' },
 ];
 // =============================================================================
 
