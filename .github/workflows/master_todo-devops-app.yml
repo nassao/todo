@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - ToDo-devops-app
+name: Build and deploy Node.js app to Azure Web App - todo-devops-app
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '18.x'
 
       - name: npm install, build, and test
         run: |
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1A02BF7270A1496B97166B7FA59B5BB6 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6E461E51AA3A41929309C8A69C77D338 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_21504A468FE540259345C2A21D7B7E05 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A8B472D1C70A452AB7347B7B4FE21284 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_185D37EBDC5B43B9902B103C15322F47 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_55D1EB6F85FF4EB182C4340AB1D42C2F }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ToDo-devops-app'
+          app-name: 'todo-devops-app'
           slot-name: 'Production'
           package: .
           
